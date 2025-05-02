@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ride Status</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let subscription = JSON.parse(localStorage.getItem("subscriptionPlan"));
+
+            if (!subscription || new Date(subscription.expiry) < new Date()) {
+                window.location.href = "subscription.html"; // If expired, ask to resubscribe
+                return;
+            }
+
+            document.getElementById("remainingRides").innerText = subscription.rides;
+
+            document.getElementById("takeRide").addEventListener("click", function () {
+                if (subscription.rides > 0) {
+                    subscription.rides--;
+                    localStorage.setItem("subscriptionPlan", JSON.stringify(subscription));
+                    document.getElementById("remainingRides").innerText = subscription.rides;
+                    alert("Ride started!");
+                } else {
+                    alert("No rides left! Please renew your subscription.");
+                    window.location.href = "subscription.html";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Welcome to LPU E-RIDE</h2>
+    <p>Remaining Rides: <span id="remainingRides"></span></p>
+    <button id="takeRide">Take a Ride</button>
+</body>
+</html>

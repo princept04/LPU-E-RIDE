@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LPU E-RIDE - ₹2200 Payment</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="./bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <style>
+    body {
+      background: url('./5859972.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      width: 400px;
+      backdrop-filter: blur(8px);
+      position: relative;
+      z-index: 1;
+    }
+    h2 {
+      text-align: center;
+      color: #ff6f00;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+    .btn-custom {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff6f00;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #e65100;
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <div class="bg-overlay"></div>
+
+  <div class="container d-flex flex-column align-items-center justify-content-center vh-100 position-relative">
+    <h2 class="mb-2">LPU E-RIDE Payment</h2>
+    <p class="mb-4">Scan the QR code to pay ₹2200</p>
+
+    <div class="bg-light p-3 rounded shadow mb-4">
+      <img src="./2200 round scanner.jpg" alt="QR Code" class="img-fluid" style="width: 200px; height: 200px; object-fit: contain;">
+    </div>
+
+    <div class="form-container">
+      <h2>LPU E-RIDE Subscription</h2>
+      <form id="paymentForm" class="w-100">
+        <div class="mb-3">
+          <input type="text" id="user_name" name="user_name" class="form-control" placeholder="Your Name" required />
+        </div>
+        
+        <div class="mb-3">
+          <input type="email" id="user_email" name="user_email" class="form-control" placeholder="Your Email" required />
+        </div>
+        
+        <div class="mb-3">
+          <select id="selected_plan" name="selected_plan" class="form-select" required>
+            <option value="₹2200/month" selected>₹2200/month</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="btn-custom">Confirm Plan</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    emailjs.init("ULhtWBtKg_fLihR_I"); // Replace with your actual EmailJS public key
+
+    document.getElementById("paymentForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const userName = document.getElementById("user_name").value;
+      const userEmail = document.getElementById("user_email").value;
+      const plan = document.getElementById("selected_plan").value;
+
+      const templateParams = {
+        user_name: userName,
+        user_email: userEmail,
+        plan_name: plan,
+        to_email: userEmail
+      };
+
+      emailjs.send("service_ol3l22a", "template_k13arvj", templateParams)
+        .then(function(response) {
+          console.log("Success:", response);
+          window.location.href = `confirmed.html?email=${encodeURIComponent(userEmail)}&name=${encodeURIComponent(userName)}&plan=${encodeURIComponent(plan)}`;
+        }, function(error) {
+          alert("Failed to send email: " + JSON.stringify(error));
+          console.log("Error:", error);
+        });
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

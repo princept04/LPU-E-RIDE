@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LPU E-RIDE QR Test</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      color: #ff6b00;
+    }
+    #qrcode {
+      margin-top: 20px;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h2>📱 Scan to Confirm Subscription</h2>
+  <div id="qrcode"></div>
+  <p class="note">Scan this code with your phone camera. It will redirect you to the confirmation page.</p>
+
+  <script>
+    // Replace with the correct local IP address and port
+    const confirmationURL = "http://192.168.0.105:3000/fontawesome-free-6.7.2-web/qr.html";
+
+    // Generate QR Code
+    new QRCode(document.getElementById("qrcode"), {
+      text: confirmationURL,
+      width: 180,
+      height: 180,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>

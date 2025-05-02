@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPU E-RIDE - Login</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
+    <style>
+        body {
+            background: url('./young-woman-riding-electric-scooter.jpg') no-repeat center center/cover;
+            font-family: "Poppins", sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+        }
+
+        .login-container h1 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .btn-custom {
+            background: #ffcc00;
+            color: #000;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .btn-custom:hover {
+            background: #e6b800;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        a:hover {
+            color: #e6b800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Login to LPU E-RIDE</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <a href="./home.html" class="btn-custom text-center d-block">Login</a>
+            <p id="error-message" class="error-message"></p>
+        </form>
+        <a href="./forgot password.html">Forgot Password?</a>
+    </div>
+
+    
+
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

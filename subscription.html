@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPU E-RIDE - Subscription</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link href="./fontawesome-free-6.7.2-web/css/all.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('./5859972.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .bg-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LPU E-RIDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="subscription.html">Plans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ride history.html">Ride History</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-overlay"></div>
+
+
+    <div class="container text-center mt-5 pt-5">
+        <h2 class="text-warning mb-4">Choose Your Plan</h2>
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+                <div class="card bg-dark bg-opacity-75 text-white border-warning">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Basic Plan</h5>
+                        <h6 class="card-subtitle mb-2 text-white">&#8377;450/month</h6>
+                        <ul class="list-unstyled my-3">
+                            <li><i class="fa-solid fa-arrow-right text-warning"></i> 2 Rides</li>
+                            <li><i class="fa-solid fa-arrow-right text-warning"></i> No Waiting Time</li>
+                        </ul>
+                        <a href="./450.html" class="btn btn-warning fw-bold">Subscribe Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-dark bg-opacity-75 text-white border-warning">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Standard Plan</h5>
+                        <h6 class="card-subtitle mb-2 text-white">&#8377;1200/3 months</h6>
+                        <ul class="list-unstyled my-3">
+                            <li><i class="fa-solid fa-arrow-right text-warning"></i> 3 Rides</li>
+                            <li><i class="fa-solid fa-arrow-right text-warning"></i> No Waiting Time</li>
+                        </ul>
+                        <a href="./1200.html" class="btn btn-warning fw-bold">Subscribe Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-dark bg-opacity-75 text-white border-warning">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Premium Plan</h5>
+                        <h6 class="card-subtitle mb-2 text-white">&#8377;2200/6 months</h6>
+                        <ul class="list-unstyled my-3">
+                            <li><i class="fa-solid fa-arrow-right text-warning"></i> 4 Rides</li>
+                            <li><i class="fa-solid fa-arrow-right text-warning"></i> No Waiting Time</li>
+                        </ul>
+                        <a href="./2200.html" class="btn btn-warning fw-bold">Subscribe Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

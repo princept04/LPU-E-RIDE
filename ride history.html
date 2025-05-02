@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ride History - LPU E-RIDE</title>
+  <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.css">
+
+  <style>
+    body {
+      background: url('./young-woman-riding-electric-scooter.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background-color: #ffc107;
+      color: black;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container text-center">
+      <a class="navbar-brand mx-auto text-warning fw-bold" href="www.lpu.in">LPU E-RIDE</a>
+    </div>
+  </nav>
+
+  <div class="d-flex justify-content-center align-items-center" style="min-height: 80vh; padding-top: 60px;">
+    <div class="bg-dark bg-opacity-75 p-4 text-white" style="max-width: 1000px; width:100%;">
+      <h2 class="text-center text-warning mb-3">Ride History</h2>
+
+      <div class="table-responsive" style="max-height: 60vh; overflow-y: auto;">
+        <table class="table table-dark table-hover text-center">
+          <thead>
+            <tr>
+              <th>Ride ID</th>
+              <th>Scooter ID</th>
+              <th>Date & Time</th>
+              <th>Distance (km)</th>
+              <th>Ride Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr><td>RIDE001</td><td>SCOOT123</td><td>2025-03-18 10:30 AM</td><td>2.5</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE002</td><td>SCOOT234</td><td>2025-03-18 01:15 PM</td><td>3.2</td><td class="text-danger">Canceled</td></tr>
+            <tr><td>RIDE003</td><td>SCOOT345</td><td>2025-03-18 03:00 PM</td><td>4.1</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE004</td><td>SCOOT456</td><td>2025-03-18 05:20 PM</td><td>1.9</td><td class="text-warning">Ongoing</td></tr>
+            <tr><td>RIDE005</td><td>SCOOT567</td><td>2025-03-17 09:45 AM</td><td>2.7</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE006</td><td>SCOOT678</td><td>2025-03-17 11:30 AM</td><td>3.3</td><td class="text-danger">Canceled</td></tr>
+            <tr><td>RIDE007</td><td>SCOOT789</td><td>2025-03-17 01:10 PM</td><td>4.0</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE008</td><td>SCOOT890</td><td>2025-03-17 03:40 PM</td><td>2.1</td><td class="text-warning">Ongoing</td></tr>
+            <tr><td>RIDE009</td><td>SCOOT901</td><td>2025-03-16 08:30 AM</td><td>5.5</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE010</td><td>SCOOT012</td><td>2025-03-16 10:15 AM</td><td>1.8</td><td class="text-danger">Canceled</td></tr>
+            <tr><td>RIDE011</td><td>SCOOT112</td><td>2025-03-16 12:00 PM</td><td>2.0</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE012</td><td>SCOOT122</td><td>2025-03-16 02:50 PM</td><td>3.7</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE013</td><td>SCOOT132</td><td>2025-03-16 04:30 PM</td><td>2.9</td><td class="text-warning">Ongoing</td></tr>
+            <tr><td>RIDE014</td><td>SCOOT142</td><td>2025-03-15 09:00 AM</td><td>1.5</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE015</td><td>SCOOT152</td><td>2025-03-15 10:45 AM</td><td>4.3</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE016</td><td>SCOOT162</td><td>2025-03-15 12:30 PM</td><td>2.4</td><td class="text-warning">Ongoing</td></tr>
+            <tr><td>RIDE017</td><td>SCOOT172</td><td>2025-03-15 02:10 PM</td><td>5.0</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE018</td><td>SCOOT182</td><td>2025-03-15 04:00 PM</td><td>1.7</td><td class="text-danger">Canceled</td></tr>
+            <tr><td>RIDE019</td><td>SCOOT192</td><td>2025-03-14 08:45 AM</td><td>3.8</td><td class="text-success">Completed</td></tr>
+            <tr><td>RIDE020</td><td>SCOOT202</td><td>2025-03-14 10:30 AM</td><td>2.6</td><td class="text-success">Completed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
